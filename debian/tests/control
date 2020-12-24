@@ -1,11 +1,14 @@
 
 # cryfs-cli-test and fspp-test are disabled for requiring fuse
 
-Tests:	blobstore-test,
-	blockstore-test,
-	cpp-utils-test,
-	cryfs-test,
-	gitversion-test
-	parallelaccessstore-test,
-Depends: @, @builddeps@
-Restrictions: build-needed
+# Tests:	blobstore-test,
+# 	blockstore-test,
+# 	cpp-utils-test,
+# 	cryfs-test,
+# 	gitversion-test
+# 	parallelaccessstore-test,
+# Depends: @, @builddeps@
+# Restrictions: build-needed
+
+Tests: mounttest.py
+Depends: @, python3-pexpect
