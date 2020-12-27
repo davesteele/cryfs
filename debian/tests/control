@@ -1,6 +1,6 @@
 
 # cryfs-cli-test and fspp-test are disabled for requiring fuse
-
+# TODO - deprecate this test after a working mount test is propagated.
 # Tests:	blobstore-test,
 # 	blockstore-test,
 # 	cpp-utils-test,
@@ -10,5 +10,8 @@
 # Depends: @, @builddeps@
 # Restrictions: build-needed
 
+# Test cryfs creation and mounting
+# This does not work in lxc - fuse and containers do not get along
 Tests: mounttest.py
 Depends: @, python3-pexpect
+Restrictions: isolation-machine

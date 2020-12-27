@@ -48,11 +48,11 @@ session = pexpect.spawn(
 
 session.expect("Your choice")
 session.sendline("y")
-session.expect("Password:")
+session.expect("Password:", timeout=600)
 session.sendline(password)
-session.expect("Confirm Password:")
+session.expect("Confirm Password:", timeout=600)
 session.sendline(password)
-session.expect(pexpect.EOF)
+session.expect(pexpect.EOF, timeout=600)
 
 print("Test the volume")
 assert not testfilepath.exists()
@@ -62,6 +62,7 @@ assert testfilepath.read_text() == testtext
 
 print("Unmount and test")
 umount(mntpath)
+time.sleep(1)
 assert not testfilepath.exists()
 
 print("Remount and test")
@@ -75,3 +76,5 @@ assert testfilepath.read_text() == testtext
 
 print("Final cleanup")
 cleanup()
+mntpath.rmdir()
+basepath.rmdir()
