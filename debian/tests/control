@@ -13,5 +13,5 @@
 # Test cryfs creation and mounting
 # This does not work in lxc - fuse and containers do not get along
 Tests: mounttest.py
-Depends: @, python3-pexpect
+Depends: @, python3-pexpect, haveged
 Restrictions: isolation-machine
