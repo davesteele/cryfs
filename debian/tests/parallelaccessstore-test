@@ -1,5 +1,0 @@
-#!/bin/bash
-
-set -e
-
-./obj*/test/parallelaccessstore/parallelaccessstore-test
