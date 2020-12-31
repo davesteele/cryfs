@@ -1,3 +1,9 @@
+cryfs (0.10.2-5) unstable; urgency=medium
+
+  * Add an autopkgtest for terminating options.
+
+ -- David Steele <steele@debian.org>  Thu, 31 Dec 2020 10:02:29 -0500
+
 cryfs (0.10.2-4) unstable; urgency=medium
 
   * Update autopkgtests to a more streamlined test.
