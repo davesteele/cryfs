@@ -1,3 +1,9 @@
+cryfs (0.11.0-1) UNRELEASED; urgency=medium
+
+  * New upstream version.
+
+ -- David Steele <steele@debian.org>  Wed, 25 Aug 2021 17:54:51 -0400
+
 cryfs (0.10.2-5) unstable; urgency=medium
 
   * Add an autopkgtest for terminating options.
