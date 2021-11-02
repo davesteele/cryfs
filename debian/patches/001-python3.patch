@@ -1,3 +1,7 @@
+Description: Explicitly set the python shebang
+Author: David Steele <steele@debian.org>
+Forwarded: no
+
 --- a/src/gitversion/gitversion.cmake
 +++ b/src/gitversion/gitversion.cmake
 @@ -1,7 +1,7 @@
