@@ -27,14 +27,6 @@ Copyright: [2007] Neal Norwitz
            [2007-2008] Google Inc.
 License: Apache-2
 
-Files: vendor/scrypt/vendor_cryptopp/*
-Copyright: 2009 Colin Percival <cperciva@tarsnap.com>
-License: BSD-2-clause
-
-Files: vendor/spdlog/spdlog/*
-Copyright: 2015-2016 Gabi Melman
-License: Expat
-
 
 License: BSD-2-clause
  Redistribution and use in source and binary forms, with or without

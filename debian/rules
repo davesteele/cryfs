@@ -6,9 +6,18 @@ ARCH := $(shell uname -m)
 	dh $@
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DCMAKE_BUILD_TYPE=Release -DBoost_USE_STATIC_LIBs=off \
-                         -DCRYFS_UPDATE_CHECKS=off -DBUILD_TESTING=False; \
+	mkdir -p build
+	(cd build && cmake .. -DDEPENDENCY_CONFIG=../cmake-utils/DependenciesFromLocalSystem.cmake -DBUILD_TESTING=ON -DCRYFS_UPDATE_CHECKS=OFF)
 
 override_dh_auto_build:
-	dh_auto_build
-	cp obj*/src/cryfs-cli/cryfs .
+	(cd build && make -j 8)
+	./build/test/blobstore/blobstore-test
+	./build/test/blockstore/blockstore-test
+	./build/test/cryfs/cryfs-test
+	./build/test/parallelaccessstore/parallelaccessstore-test
+	./build/test/gitversion/gitversion-test
+	# Test fails with pbuilder
+	./build/test/cpp-utils/cpp-utils-test --gtest_filter=-HomedirTest.HomedirExists
+	# ./build/test/cryfs-cli/cryfs-cli-test
+	# Test requires root (and fuse)
+	# ./build/test/fspp/fspp-test
