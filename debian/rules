@@ -10,7 +10,7 @@ override_dh_auto_configure:
 	(cd build && cmake .. -DDEPENDENCY_CONFIG=../cmake-utils/DependenciesFromLocalSystem.cmake -DBUILD_TESTING=ON -DCRYFS_UPDATE_CHECKS=OFF)
 
 override_dh_auto_build:
-	(cd build && make -j 8)
+	(cd build && make)
 	./build/test/blobstore/blobstore-test
 	./build/test/blockstore/blockstore-test
 	./build/test/cryfs/cryfs-test
