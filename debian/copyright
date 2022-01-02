@@ -7,7 +7,7 @@ Copyright: 2016, Sebastian Messmer <messmer@cryfs.org>
 License: LGPL-3
 
 Files: debian/*
-Copyright: 2016, David Steele <steele@debian.org>
+Copyright: 2022, David Steele <steele@debian.org>
 License: LGPL-3
 
 Files: src/cpp-utils/io/pipestream.h
