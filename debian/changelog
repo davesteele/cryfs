@@ -1,8 +1,10 @@
-cryfs (0.11.0-1) UNRELEASED; urgency=medium
+cryfs (0.11.0-1) unstable; urgency=medium
 
   * New upstream version.
+  * New build system (Closes: #995135)
+  * Add Unit Tests to package, and exercise in autopkgtest.
 
- -- David Steele <steele@debian.org>  Wed, 25 Aug 2021 17:54:51 -0400
+ -- David Steele <steele@debian.org>  Sun, 02 Jan 2022 11:19:57 -0500
 
 cryfs (0.10.2-5) unstable; urgency=medium
 
