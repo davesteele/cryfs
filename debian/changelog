@@ -1,3 +1,9 @@
+cryfs (0.11.0-2) unstable; urgency=medium
+
+  * Fix architecture builds.
+
+ -- David Steele <steele@debian.org>  Mon, 03 Jan 2022 16:22:16 -0500
+
 cryfs (0.11.0-1) unstable; urgency=medium
 
   * New upstream version.
