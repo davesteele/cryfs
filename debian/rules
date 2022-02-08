@@ -7,11 +7,11 @@ ARCH := $(shell uname -m)
 
 override_dh_auto_configure:
 	mkdir -p build
-	CXXF=
+	NONEON=
 	if dpkg-architecture -e armel; then \
-	    CXXF="-DCMAKE_CXX_FLAGS=$(CMAKE_CXX_FLAGS) -mfloat-abi=softfp"; \
+	    NONEON="-DDISABLE_ARM_NEON=ON"; \
 	fi
-	(cd build && cmake .. ${CXXF} -DDEPENDENCY_CONFIG=../cmake-utils/DependenciesFromLocalSystem.cmake -DBUILD_TESTING=ON -DCRYFS_UPDATE_CHECKS=OFF)
+	(cd build && cmake .. ${NONEON} -DDEPENDENCY_CONFIG=../cmake-utils/DependenciesFromLocalSystem.cmake -DBUILD_TESTING=ON -DCRYFS_UPDATE_CHECKS=OFF)
 
 override_dh_auto_build:
 	(cd build && make)
