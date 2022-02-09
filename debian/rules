@@ -14,7 +14,7 @@ override_dh_auto_configure:
 	fi
 
 override_dh_auto_build:
-	(cd build && make)
+	(cd build && make VERBOSE=1)
 	./build/test/blobstore/blobstore-test
 	./build/test/blockstore/blockstore-test --gtest_filter=-CacheTest_RaceCondition.*
 	# Config Compatibility tests fail on s390x, mipsel, and hppa archs
