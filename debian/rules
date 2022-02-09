@@ -1,17 +1,17 @@
 #!/usr/bin/make -f
 
-ARCH := $(shell uname -m)
-
 %:
 	dh $@
 
 override_dh_auto_configure:
 	mkdir -p build
-	NONEON=
-	if dpkg-architecture -e armel; then \
-	    NONEON="-DDISABLE_ARM_NEON=ON"; \
+	dpkg-architecture
+	if `dpkg-architecture -e armel`; then \
+	    echo "Performing armel build"; \
+	    (cd build && cmake .. -DDISABLE_ARM_NEON=ON -DDEPENDENCY_CONFIG=../cmake-utils/DependenciesFromLocalSystem.cmake -DBUILD_TESTING=ON -DCRYFS_UPDATE_CHECKS=OFF); \
+	else \
+	    (cd build && cmake .. -DDEPENDENCY_CONFIG=../cmake-utils/DependenciesFromLocalSystem.cmake -DBUILD_TESTING=ON -DCRYFS_UPDATE_CHECKS=OFF); \
 	fi
-	(cd build && cmake .. ${NONEON} -DDEPENDENCY_CONFIG=../cmake-utils/DependenciesFromLocalSystem.cmake -DBUILD_TESTING=ON -DCRYFS_UPDATE_CHECKS=OFF)
 
 override_dh_auto_build:
 	(cd build && make)
