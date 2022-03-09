@@ -1,3 +1,10 @@
+cryfs (0.11.2-1) unstable; urgency=medium
+
+  * Release 0.11.2-1
+  * More changes to support armel build.
+
+ -- David Steele <steele@debian.org>  Tue, 08 Mar 2022 12:31:15 -0500
+
 cryfs (0.11.1-4) unstable; urgency=medium
 
   * Add upstream patch for cryptopp build vars.
