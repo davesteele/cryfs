@@ -15,14 +15,14 @@ override_dh_auto_configure:
 
 override_dh_auto_build:
 	(cd build && make VERBOSE=1)
-	./build/test/blobstore/blobstore-test
-	./build/test/blockstore/blockstore-test --gtest_filter=-CacheTest_RaceCondition.*
+	./build/test/blobstore/blobstore-test 2>&1
+	./build/test/blockstore/blockstore-test --gtest_filter='-CacheTest_RaceCondition.*' 2>&1
 	# Config Compatibility tests fail on s390x, mipsel, and hppa archs
-	./build/test/cryfs/cryfs-test --gtest_filter=-CryConfigCompatibilityTest.*
-	./build/test/parallelaccessstore/parallelaccessstore-test
-	./build/test/gitversion/gitversion-test
+	./build/test/cryfs/cryfs-test --gtest_filter='-CryConfigCompatibilityTest.*' 2>&1
+	./build/test/parallelaccessstore/parallelaccessstore-test 2>&1
+	./build/test/gitversion/gitversion-test 2>&1
 	# Test fails with pbuilder
-	./build/test/cpp-utils/cpp-utils-test --gtest_filter=-HomedirTest.HomedirExists
+	./build/test/cpp-utils/cpp-utils-test --gtest_filter='-HomedirTest.*' 2>&1
 	# ./build/test/cryfs-cli/cryfs-cli-test
 	# Test requires root (and fuse)
 	# ./build/test/fspp/fspp-test
