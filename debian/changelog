@@ -1,3 +1,11 @@
+cryfs (0.11.2-2) unstable; urgency=medium
+
+  * Harden build testing.
+  * armel and armhg are building (Closes: #1006820).
+  * Build tests passing on all archs (Closes: #1003679).
+
+ -- David Steele <steele@debian.org>  Fri, 11 Mar 2022 13:20:41 -0500
+
 cryfs (0.11.2-1) unstable; urgency=medium
 
   * Release 0.11.2-1
