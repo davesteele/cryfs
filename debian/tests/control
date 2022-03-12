@@ -22,9 +22,10 @@ Test-Command: debian/tests/unittest blockstore
 Features: test-name=blockstore
 Depends: @
 
-Test-Command: debian/tests/unittest cpp-utils
-Features: test-name=cpp-utils
-Depends: @
+# issue with some test environments
+#Test-Command: debian/tests/unittest cpp-utils
+#Features: test-name=cpp-utils
+#Depends: @
 
 Test-Command: debian/tests/unittest cryfs
 Features: test-name=cryfs
