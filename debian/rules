@@ -6,7 +6,7 @@
 override_dh_auto_configure:
 	mkdir -p build
 	dpkg-architecture
-	if `dpkg-architecture -e armel`; then \
+	if `dpkg-architecture -e armel` || `dpkg-architecture -e armhf`; then \
 	    echo "Performing armel build"; \
 	    (cd build && cmake .. -DDISABLE_ASM=ON -DDEPENDENCY_CONFIG=../cmake-utils/DependenciesFromLocalSystem.cmake -DBUILD_TESTING=ON -DCRYFS_UPDATE_CHECKS=OFF); \
 	else \
