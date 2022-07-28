@@ -1,3 +1,9 @@
+cryfs (0.11.2-5) unstable; urgency=medium
+
+  * Potenial fix for libfmt 9.0 incompatibility (Closes: #1014684).
+
+ -- David Steele <steele@debian.org>  Wed, 27 Jul 2022 21:25:32 -0400
+
 cryfs (0.11.2-4) unstable; urgency=medium
 
   * DISABLE_ASM for armhf as well
