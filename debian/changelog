@@ -1,9 +1,9 @@
-cryfs (0.11.3-1) UNRELEASED; urgency=medium
+cryfs (0.11.3-1) unstable; urgency=medium
 
   * New upstream version.
   * Add cryfs-unmount to package (Closes: #1008845, #1017721).
 
- -- David Steele <steele@debian.org>  Thu, 03 Nov 2022 12:01:31 -0400
+ -- David Steele <steele@debian.org>  Thu, 03 Nov 2022 17:50:53 -0400
 
 cryfs (0.11.2-5) unstable; urgency=medium
 
