@@ -78,6 +78,10 @@ jobs:
         run_build: [true]
         run_tests: [true]
         run_clang_tidy: [false]
+        exclude:
+          # Apple CI machines cannot install LLVM 7 via homebrew anymore
+          - os: macos-10.15
+            compiler: {cxx: clang++-7, cc: clang-7, macos_cxx: /usr/local/opt/llvm@7/bin/clang++, macos_cc: /usr/local/opt/llvm@7/bin/clang, apt_package: clang-7, homebrew_package: llvm@7}
         include:
           - name: Local dependencies
             os: ubuntu-18.04
@@ -403,7 +407,7 @@ jobs:
         with:
           gtest_args: ${{matrix.gtest_args}}
           extra_env_vars: ${{matrix.extra_env_vars_for_test}}
-          
+
   windows:
     name: CI (Windows)
     strategy:
