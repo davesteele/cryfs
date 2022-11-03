@@ -1,5 +1,2 @@
-# 001-python3.patch
 002-cryfs-unmount-man.patch
-003-python3.patch
 004-cryptopp-armel-cmake.patch
-005-libfmt-fix.patch
