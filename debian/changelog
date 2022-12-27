@@ -1,3 +1,9 @@
+cryfs (0.11.3-4) jammy; urgency=medium
+
+  * Disable asm on s390x build
+
+ -- David Steele <steele@debian.org>  Tue, 27 Dec 2022 16:25:41 -0500
+
 cryfs (0.11.3-3) unstable; urgency=medium
 
   * Revert NEWS.
