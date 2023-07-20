@@ -1,8 +1,0 @@
---- a/src/gitversion/getversion.py
-+++ b/src/gitversion/getversion.py
-@@ -2,4 +2,4 @@
- 
- import versioneer
- 
--print(versioneer.get_version())
-+print("0.11.4")
