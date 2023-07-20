@@ -1,8 +1,9 @@
-cryfs (0.11.4-1) UNRELEASED; urgency=medium
+cryfs (0.11.4-1) unstable; urgency=medium
 
-  * Start 0.11.4 release.
+  * New upstream version.
+  * Fix gcc-13 compile problem (Closes: #1037612)
 
- -- David Steele <steele@debian.org>  Sun, 09 Jul 2023 09:40:17 -0400
+ -- David Steele <steele@debian.org>  Thu, 20 Jul 2023 15:27:59 -0400
 
 cryfs (0.11.3-5) unstable; urgency=medium
 
