@@ -24,13 +24,13 @@ Applied-Upstream: <version>, (<commit-url>|commit:<commid-id>)
 Reviewed-By: <name and email of someone who approved/reviewed the patch>
 Last-Update: 2023-07-09
 
---- cryfs-0.11.3.orig/CMakeLists.txt
-+++ cryfs-0.11.3/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
 @@ -1,5 +1,8 @@
  cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
  
-+set(CMAKE_C_COMPILER "/usr/bin/gcc-13")
-+set(CMAKE_CXX_COMPILER "/usr/bin/g++-13")
++set(CMAKE_C_COMPILER "/usr/bin/gcc-14")
++set(CMAKE_CXX_COMPILER "/usr/bin/g++-14")
 +
  # TODO Remove this deprecated policy switch once we're on cmake 3.4 or later
  cmake_policy(SET CMP0065 OLD)
