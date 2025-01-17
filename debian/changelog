@@ -1,3 +1,9 @@
+cryfs (0.11.4-3) unstable; urgency=medium
+
+  * Move Debian hosting home to Salsa.
+
+ -- David Steele <steele@debian.org>  Fri, 17 Jan 2025 12:57:32 -0500
+
 cryfs (0.11.4-2) unstable; urgency=medium
 
   * Upgrade build to gcc version 14.
