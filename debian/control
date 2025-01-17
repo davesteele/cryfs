@@ -20,8 +20,8 @@ Build-Depends: debhelper-compat (= 13),
                python3-versioneer,
 Rules-Requires-Root: no
 Standards-Version: 4.6.0.1
-Vcs-Browser: https://github.com/davesteele/cryfs
-Vcs-Git: https://github.com/davesteele/cryfs.git -b debian
+Vcs-Browser: https://salsa.debian.org/steele/cryfs
+Vcs-Git: https://salsa.debian.org/steele/cryfs.git -b debian
 Homepage: https://www.cryfs.org/
 
 Package: cryfs
